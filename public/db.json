@@ -1,0 +1,100 @@
+{
+  "devices": [
+    {
+      "id": 1,
+      "sku": 1,
+      "title": "Phone1",
+      "price": 250,
+      "color": ["Blue ", "Gold ", "Silver"],
+      "capacity": "64GB",
+      "info": "A few features come standard on this phones. Most are sold with voicemail, last-number redial, speed dial, name storage, call-time indicator and security features already installed. Other common features that you might want, but will pay more for, include call waiting and call forwarding.A long-lasting battery.Warp-speed processing.Crystal-clear display",
+      "inCart": false,
+      "count":0,
+      "total": 0
+    },
+    {
+      "id": 2,
+      "sku": 2,
+      "title": "Phone2",
+      "price": 200,
+      "color": ["Blue ", "Gold ", "Silver"],
+      "capacity": "64GB",
+      "info": "A few features come standard on this phones. Most are sold with voicemail, last-number redial, speed dial, name storage, call-time indicator and security features already installed. Other common features that you might want, but will pay more for, include call waiting and call forwarding.A long-lasting battery.Warp-speed processing.Crystal-clear display",
+      "inCart": false,
+      "count":0,
+      "total": 0
+    },
+    {
+      "id": 3,
+      "sku": 3,
+      "title": "Phone3",
+      "price": 450,
+      "color": ["Blue ", "Gold ", "Silver"],
+      "capacity": "64GB",
+      "info": "A few features come standard on this phones. Most are sold with voicemail, last-number redial, speed dial, name storage, call-time indicator and security features already installed. Other common features that you might want, but will pay more for, include call waiting and call forwarding.A long-lasting battery.Warp-speed processing.Crystal-clear display",
+      "inCart": false,
+      "count":0,
+      "total": 0
+    },
+    {
+      "id": 4,
+      "sku": 4,
+      "title": "Phone4",
+      "price": 220,
+      "color": ["Blue ", "Gold ", "Silver"],
+      "capacity": "64GB",
+      "info": "A few features come standard on this phones. Most are sold with voicemail, last-number redial, speed dial, name storage, call-time indicator and security features already installed. Other common features that you might want, but will pay more for, include call waiting and call forwarding.A long-lasting battery.Warp-speed processing.Crystal-clear display",
+      "inCart": false,
+      "count":0,
+      "total": 0
+    },
+    {
+      "id": 5,
+      "sku": 5,
+      "title": "Phone5",
+      "price": 350,
+      "color": ["Blue ", " Gold", " Silver"],
+      "capacity": "64GB",
+      "info": "A few features come standard on this phones. Most are sold with voicemail, last-number redial, speed dial, name storage, call-time indicator and security features already installed. Other common features that you might want, but will pay more for, include call waiting and call forwarding.A long-lasting battery.Warp-speed processing.Crystal-clear display",
+      "inCart": false,
+      "count":0,
+      "total": 0
+    },
+    {
+      "id": 6,
+      "sku": 6,
+      "title": "Phone6",
+      "price": 400,
+      "color": ["Blue ", " Gold", " Silver"],
+      "capacity": "64GB",
+      "info": "A few features come standard on this phones. Most are sold with voicemail, last-number redial, speed dial, name storage, call-time indicator and security features already installed. Other common features that you might want, but will pay more for, include call waiting and call forwarding.A long-lasting battery.Warp-speed processing.Crystal-clear display",
+      "inCart": false,
+      "count":0,
+      "total": 0
+    }    
+  ],
+  "details": [
+    {
+      "id": 1,
+      "sku": 1,
+      "title": "Phone1",
+      "price": 250,
+      "color": ["Blue,", "Gold,", "Silver"],
+      "capacity": "64GB",
+      "info": "A few features come standard on this phones. Most are sold with voicemail, last-number redial, speed dial, name storage, call-time indicator and security features already installed. Other common features that you might want, but will pay more for, include call waiting and call forwarding.A long-lasting battery.Warp-speed processing.Crystal-clear display",
+      "inCart": false,
+      "count":0,
+      "total": 0
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
