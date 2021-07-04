@@ -48,7 +48,7 @@ export default class Devices extends Component {
                  <h4>
                    {this.props.devices.title}
                  </h4>
-                 <button className="btn btn-primary btn-lg " disabled={this.props.devices.inCart ? true : false} onClick={() => { value.addToCart(id)}} />
+                 <button className="btn btn-primary btn-lg " disabled={this.props.devices.inCart ? true : false} onClick={() => { value.addToCart(id)}} >{inCart ? "inCart" : "add to cart"}</button>
                </div>
              )
                 

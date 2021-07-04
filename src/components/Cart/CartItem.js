@@ -1,8 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 export default function CartItem({item,value}) {
     const{id,title,img,price,color,total,count,capacity} = item;
-    const{increment,decrement,removeItem} = value
+    const{increment,decrement,removeItem,editDetails,colorName} = value
     return (
         <div className="row my-2 text-capitalize text-center">
             <div className="col-10 mx-auto col-lg-1">
@@ -14,11 +15,11 @@ export default function CartItem({item,value}) {
             </div>
             <div className="col-10 mx-auto col-lg-1">
                 <span className="d-lg-none">Color:</span>
-                {color}
+                {colorName ? colorName : "Blue"}
             </div>
             <div className="col-10 mx-auto col-lg-1">
                 <span className="d-lg-none">Capacity:</span>
-                {capacity}
+                {capacity ? capacity : "64GB"}
             </div>
             <div className="col-10 mx-auto col-lg-1">
                 <span className="d-lg-none">Price:</span>
@@ -41,6 +42,11 @@ export default function CartItem({item,value}) {
             </div>
             <div className="col-10 mx-auto col-lg-1">
                 <strong> total: ${total}</strong>
+            </div>
+            <div className="col-10 mx-auto col-lg-1">
+                <Link to="/details">
+                  <span className="glyphicon glyphicon-pencil text-info" type="button" onClick={()=>editDetails(id)}></span>
+                </Link>
             </div>
         </div>
     )

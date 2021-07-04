@@ -8,12 +8,14 @@ import DeviceList from './components/DeviceList';
 import Details from './components/Details';
 import Cart from './components/Cart/Cart';
 import Default from './components/Default';
+import Navbar from './components/Navbar';
 
 class App extends Component {
   render() {
     return (
       <div className="App-header App">
       <React.Fragment>
+        <Navbar/>
         <Switch>
           <Route exact path="/" component={DeviceList} />
           <Route path="/details" component={Details} />

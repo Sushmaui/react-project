@@ -20,8 +20,8 @@ export default class DeviceList extends Component {
         return(
           <React.Fragment>
             <div className="container">
-              <Title name="Welcome" title="Devices" />
-              <div className="row">
+              <Title className="p-3 m-3" title="Devices" />
+              <div className="row mt-5 pt-5">
                 {/* <Devices devices={this.state.filteredDevices} handleAddCart={this.handleAddCart} /> */}
                 <DeviceConsumer>
                   {value => {

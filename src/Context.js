@@ -10,7 +10,7 @@ class DeviceProvider extends Component {
 
     constructor(props){
         super(props);
-        this.state = {devices:[], filteredDevices: [], details: [], cart: [], cartSubTotal:0, cartTax:0,cartTotal:0};
+        this.state = {devices:[], filteredDevices: [], details: [], cart: [], colorName:'', cartSubTotal:0, cartTax:0,cartTotal:0};
       }
     componentDidMount() {
         // fetch("http://localhost:8000/devices").then(res => res.json())
@@ -34,7 +34,7 @@ class DeviceProvider extends Component {
                     devices: data_devices,
                     filteredDevices: data_devices,
                     details: data_details,
-                    
+
                 })
             })
     }
@@ -44,12 +44,28 @@ class DeviceProvider extends Component {
     // };
 
     setDevices(){
-        return this.devices
+        fetch("http://localhost:8000/devices").then(res => res.json())
+        .then(data => this.setState({
+          devices:data,
+        }))
     }
 
     getItem =(id) =>{
         const device =this.state.devices.find(item => item.id === id);
         return device;
+    }
+
+    selectedColor =(e) => {
+        // let tempDevice = [...this.state.devices]
+        // const index = tempDevice.indexOf(this.getItem(id));
+        // const device = tempDevice[index];
+        // device.color = e.target.value
+        let colorname= e.target.value
+                 this.setState(()=>{
+                     return {colorName:colorname}
+                     
+                 })
+  
     }
 
     handleDetail = (id) => {
@@ -140,6 +156,16 @@ class DeviceProvider extends Component {
 
     }
 
+    editDetails=(id) =>{
+        let tempCart = [...this.state.cart];
+        const index = tempCart.indexOf(this.getItem(id));
+        let device = tempCart[index]
+        this.setState(()=>{
+            return {details:device}
+        })
+       
+    }
+
     clearCart =() =>{
         this.setState(()=>{
             return {cart:[]}
@@ -148,6 +174,7 @@ class DeviceProvider extends Component {
             this.addTotal();
         })
     }
+    
     addTotal =() => {
         let subTotal = 0;
         this.state.cart.map(item => (subTotal += item.total));
@@ -173,7 +200,9 @@ class DeviceProvider extends Component {
                 increment: this.increment,
                 decrement: this.decrement,
                 removeItem: this.removeItem,
-                clearCart:this.clearCart
+                editDetails: this.editDetails,
+                clearCart:this.clearCart,
+                selectedColor:this.selectedColor
             }}>
                 {this.props.children}
             </DeviceContext.Provider>

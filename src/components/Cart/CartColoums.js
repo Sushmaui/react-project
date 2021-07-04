@@ -28,6 +28,9 @@ export default function CartColoums() {
                 <div className="col-10 mx-auto col-lg-1">
                     <p className="text-uppercase"><strong>total</strong></p>
                 </div>
+                <div className="col-10 mx-auto col-lg-1">
+                 <p className="text-uppercase"><strong>Edit</strong></p>
+                </div>
             </div>
             
         </div>
