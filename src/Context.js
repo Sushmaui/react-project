@@ -62,7 +62,7 @@ class DeviceProvider extends Component {
 
 
         }, () => {
-           // this.selectedPrice(id)
+           this.selectedPrice(id)
         })
 
 
@@ -103,7 +103,7 @@ class DeviceProvider extends Component {
         },
             (e) => {
                 this.addTotal(id);
-                // this.addSubTotal()
+               // this.addSubTotal()
             })
     };
 
@@ -125,7 +125,7 @@ class DeviceProvider extends Component {
         this.setState(() => {
             return { cart: [...tempCart] }
         }, () => {
-            this.addSubTotal();
+            //this.addSubTotal();
         })
     }
 
@@ -151,7 +151,7 @@ class DeviceProvider extends Component {
         this.setState(() => {
             return { cart: [...tempCart] }
         }, () => {
-            this.addSubTotal();
+           // this.addSubTotal();
         })
     }
 
@@ -185,6 +185,8 @@ class DeviceProvider extends Component {
         let device = tempCart[index]
         this.setState(() => {
             return { details: device }
+        },()=>{
+           //this.selectedPrice(id)
         })
 
     }
@@ -288,7 +290,8 @@ class DeviceProvider extends Component {
                 selectedCapacity: this.selectedCapacity,
                 openModal: this.openModal,
                 closeModal: this.closeModal,
-                handleChange: this.handleChange
+                handleChange: this.handleChange,
+                addSubTotal:this.addSubTotal
             }}>
                 {this.props.children}
             </DeviceContext.Provider>
