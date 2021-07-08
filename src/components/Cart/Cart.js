@@ -23,9 +23,11 @@ export default class Cart extends Component {
                                     </Link>
                                     </div>
                                     <Title name="Your" title="Cart"/>
+                                    <div className="mt-5">
                                     <CartColoums />
                                     <CartList value={value}/>
                                     <CartTotal value={value}/>
+                                    </div>
                                 </React.Fragment>
                                
                             )

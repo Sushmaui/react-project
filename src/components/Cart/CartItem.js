@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 export default function CartItem({item,value}) {
-    const{id,title,img,price,color,total,count,capacity} = item;
-    const{increment,decrement,removeItem,editDetails,colorName} = value
+    const{id,title,img,price,color,total,count,capacity,pay,selectedCapacity, selectedColor} = item;
+    const{increment,decrement,removeItem,editDetails,colorName,capacitySelected} = value
     return (
         <div className="row my-2 text-capitalize text-center">
             <div className="col-10 mx-auto col-lg-1">
@@ -15,11 +15,11 @@ export default function CartItem({item,value}) {
             </div>
             <div className="col-10 mx-auto col-lg-1">
                 <span className="d-lg-none">Color:</span>
-                {colorName ? colorName : "Blue"}
+                {selectedColor}
             </div>
             <div className="col-10 mx-auto col-lg-1">
                 <span className="d-lg-none">Capacity:</span>
-                {capacity ? capacity : "64GB"}
+                {selectedCapacity}
             </div>
             <div className="col-10 mx-auto col-lg-1">
                 <span className="d-lg-none">Price:</span>
@@ -41,8 +41,11 @@ export default function CartItem({item,value}) {
                 
             </div>
             <div className="col-10 mx-auto col-lg-1">
-                <strong> total: ${total}</strong>
+                <strong> ${pay}</strong>
             </div>
+            <div className="col-10 mx-auto col-lg-1">
+                <strong> ${total}</strong>
+            </div> 
             <div className="col-10 mx-auto col-lg-1">
                 <Link to="/details">
                   <span className="glyphicon glyphicon-pencil text-info" type="button" onClick={()=>editDetails(id)}></span>

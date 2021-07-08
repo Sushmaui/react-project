@@ -26,7 +26,10 @@ export default function CartColoums() {
                     <p className="text-uppercase"><strong>Remove</strong></p>
                 </div>
                 <div className="col-10 mx-auto col-lg-1">
-                    <p className="text-uppercase"><strong>total</strong></p>
+                    <p className="text-uppercase"><strong>Pay/Item</strong></p>
+                </div>
+                <div className="col-10 mx-auto col-lg-1">
+                    <p className="text-uppercase"><strong>Total</strong></p>
                 </div>
                 <div className="col-10 mx-auto col-lg-1">
                  <p className="text-uppercase"><strong>Edit</strong></p>
